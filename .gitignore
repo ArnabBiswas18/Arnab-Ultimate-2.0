@@ -128,3 +128,14 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+# Block files with exposed secrets
+commands/utility/word.js
+dist/index.mjs.map
+
+# Prevent any other dist files with potential secrets
+dist/
+*.map
+
+# Optional: Ignore any future direct secret config
+*.apikey
+*.key
